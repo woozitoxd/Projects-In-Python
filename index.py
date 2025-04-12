@@ -98,7 +98,7 @@ def main():
     for provincia in provincias:
         ObtenerLocalidades(provincia, localidades_collection, log_file)
 
-    api_key = '2bfc0fff874763086e0019565cd6f3cd'  #mi clave de la API para obtener el clima
+    api_key = ''  #mi clave de la API para obtener el clima
     ObtenerClimas(localidades_collection, clima_collection, api_key, log_file)
 
     # Realizar consultas en la base de datos
