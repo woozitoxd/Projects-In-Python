@@ -1,18 +1,39 @@
 import sqlite3
 
 conexion = sqlite3.connect("personas.db")
-cursor = conexion.cursor()
+cursor = conexion.cursor()  #El cursor nos sirve para poder manejar la base de datos.
 
 cursor.execute("CREATE TABLE IF NOT EXISTS personas (id INTEGER PRIMARY KEY, nombre TEXT, edad INTEGER)")
-cursor.execute("INSERT INTO personas (nombre, edad) VALUES (?,?)", ("Messi", 31))
+conexion.commit()
+
+
+cursor.execute("INSERT INTO personas (nombre, edad) VALUES (?,?)",
+    ("Messi", 31))
+conexion.commit()
+
+cursor.execute("SELECT * FROM personas")
+for fila in cursor.fetchall(): # fetchall() devuelve una lista de tuplas.
+    print(fila)
+conexion.close()
+
+
+datosNuevos = [("Tralalero", 50), ("Tralala", 100)]
+cursor.executemany("INSERT INTO personas (nombre, edad) VALUES (?,?)", datosNuevos)
 conexion.commit()
 
 cursor.execute("SELECT * FROM personas")
 
-for fila in cursor.fetchall():
-    print(fila)
-    
-conexion.close()
+for fila in cursor.fetchall(): # fetchall() devuelve una lista de tuplas.
+    print(fila)                # Mostramos los valores devueltos
+
+
+cursor.execute('UPDATE personas SET edad = 35 WHERE nombre = "Tralalero"')
+
+cursor.execute('DELETE FROM personas WHERE nombre = "Tralalero"')
+
+conexion.commit()
+
+conexion.close() #Importante SIEMPRE cerrar la conqqexion, para evitar posibles errores.
 
 conexion = sqlite3.connect("personas.db")
 cursor = conexion.cursor()
