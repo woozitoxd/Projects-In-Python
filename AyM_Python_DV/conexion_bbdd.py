@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS hijos (
 """)
 conexion.commit()
 
-
+#Clase Da Vinci
 # Insertar un hijo para probar el INNER JOIN
 cursor.execute("INSERT INTO hijos (id_padre, edad, nombre) VALUES (?, ?, ?)", (1, 5, "Thiago"))
 conexion.commit()
