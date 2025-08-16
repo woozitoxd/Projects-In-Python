@@ -6,9 +6,7 @@ from tkinter import messagebox
 def saludar():
     print("Hola desde Tkinter")
 
-def mostrar_mensaje():
-    messagebox.showinfo("Título", "Esto es una información")
-    messagebox.showerror("Error", "Hubo un problema")
+
 
 
 def main():
@@ -22,9 +20,14 @@ def main():
     boton = tkin.Button(ventana, text="Saludar", command=saludar)
     boton.pack() # Agregamos el boton a la ventana
     
+    def mostrar_mensaje():
+        messagebox.showinfo("Título", "Esto es una información")
+        messagebox.showerror("Error", "Hubo un problema")
+    
     
     boton = tkin.Button(ventana, text="Clic acá", command=mostrar_mensaje)
     boton.pack()
+    
     entrada = tkin.Entry(ventana)
     entrada.pack() # Agregamos la entrada de texto a la ventana
     

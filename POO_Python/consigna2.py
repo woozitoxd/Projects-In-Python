@@ -24,3 +24,8 @@ del precios["Banana"]
 # Recorrer diccionario
 for fruta, precio in precios.items():
     print(f"{fruta}: ${precio}")
+    
+    
+valor1 = 1 #Valor es un entero
+valor1 = 'Hola' #Valor es una cadena
+valor1 = 1/2 #Valor es float

@@ -13,3 +13,5 @@ print("Precio con descuento por undiad es de : $", round(precioTotalDescuento, 2
 precioFinal = precioTotalDescuento * cant_panDeAyer #Se calcula el precio final multiplicando el descuento aplicado po la cantidad
 
 print("El precio total por sus " + str(cant_panDeAyer) + " barras de pan de ayer, es de: $" +str(precioFinal))
+
+
