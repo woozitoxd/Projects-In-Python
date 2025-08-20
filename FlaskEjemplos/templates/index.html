@@ -1,0 +1,16 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
+</head>
+<body>
+    <h1>Ejemplo con estilos</h1>
+
+    <h1>Creando url con "url_for":</h1>
+    <a href="{{ url_for('about') }}">Ir a Acerca de</a>
+
+    <h1>Pasando parámetros en URLs:</h1>
+    <a href="{{ url_for('perfil', id=10) }}">Ver perfil</a>
+
+    <!-- <a href="/usuario/15">Ver perfil</a> -->
+
+    <script src="{{ url_for('static', filename='JavaScript/app.js') }}"></script>
+</body>
