@@ -1,66 +1,31 @@
+import datetime
 
+# Mostrar la fecha y hora actual
+fecha_hora_actual = datetime.datetime.now()
+print("Fecha y hora actual:", fecha_hora_actual)
 
+# Pedir una fecha de entrega
+fecha_entrega_str = input("Introduce la fecha de entrega (dd/mm/yyyy): ")
+fecha_entrega = datetime.datetime.strptime(fecha_entrega_str, "%d/%m/%Y")
 
+# Calcular cuántos días faltan para la entrega
+dias_faltantes = (fecha_entrega - fecha_hora_actual).days
 
-print("Hola mundo")
+# Evaluar los días restantes y mostrar el mensaje correspondiente
+if dias_faltantes > 7:
+    print("Tenés bastante tiempo, ¡organizate bien!")
+elif 1 <= dias_faltantes <= 7:
+    print("La fecha se acerca, ponete las pilas")
+elif dias_faltantes == 0:
+    print("¡Hoy es el día de entrega!")
+else:
+    print("Ya te atrasaste en la entrega")
 
-var = "hola"
-#En caso de querer concatenar tenemos dos formas de hacerlo: 
-print("Hola mundo " + var )
-#El problema de esto es que solo podremos utilizar variables 
-print("Hola mundo " , var )
+# Pedir la hora de estudio
+hora_estudio = int(input("Introduce la hora de estudio (en formato 24h, por ejemplo 14 para las 14:00): "))
 
-nombre = "Candela"
-edad = 24
-print(f"Hola, {nombre}! tu edad es {edad}")  # Resultado: Hola, Elias! tu edad es 24
-
-print(f"El año que viene tendré {edad + 1} años")  # Resultado: El año que viene tendré 31 años
-
-type(edad)
-print(type(edad))
-
-
-#Convertir cadena a entero
-y = "25"
-y_int = int(y)  # Convierte cadena a entero
-print(type(y_int))  # Salida: <class 'int'>
-
-#Cadena a decimal
-z = "3.14159"
-z_float = float(z)  # Convierte cadena a float
-print(type(z_float))  # Salida: <class 'float'>
-
-z = 10
-z_string = str(z)
-print(type(z_string))
-
-
-
-
-temperatura = 30 
-
-if temperatura > 30:
-    print("Hace calor") 
-elif temperatura > 20: 
-    print("Hace buen tiempo") 
-else: 
-    print("Hace frío")
-
-# Nótese que se usa “:” para “abrir” y se usa la identación para diferenciar
-
-x = 10
-x += 5      # x ahora es 15
-x *= 2      # x ahora es 30
-x -= 10     # x ahora es 20
-x /= 2      # x ahora es 10.0 (resultado float)
-
-edad = 18
-
-print(edad == 18)   # True
-print(edad != 21)   # True
-print(edad > 16)    # True
-print(edad < 18)    # False
-print(edad >= 18)   # True
-print(edad <= 17)   # False
-
-
+# Evaluar el horario de estudio
+if 8 <= hora_estudio <= 20:
+    print("Buen horario para estudiar")
+else:
+    print("Quizás es tarde, pensá en descansar")
