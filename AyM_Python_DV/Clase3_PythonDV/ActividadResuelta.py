@@ -20,9 +20,9 @@ while intentos < max_intentos:
     if not entrada.isdigit():
         print("Tenes ingresar un número entero.")
         continue
-    
+
     intento = int(entrada)
-    
+
     if intento == numero_secreto:
         print("¡Ganaste!")
         break
