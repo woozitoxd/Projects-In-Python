@@ -3,7 +3,6 @@ productos = [
     ["banana", 150, 30],
     ["pan", 500, 20]
 ]
-
 def mostrar_productos(lista):
     for nombre, precio, stock in lista:
         print(f"{nombre} - ${precio} - Stock: {stock}")

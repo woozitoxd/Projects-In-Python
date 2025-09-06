@@ -17,4 +17,4 @@ saludar()
 def sumar(*numeros):
     return sum(numeros)
 
-sumar(1,2,3,4,5)
+print(sumar(1,2,3,4,5))

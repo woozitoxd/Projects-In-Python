@@ -8,13 +8,13 @@ app.secret_key = "supersecretkey"
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-# Simulación de usuarios (normalmente vienen de una BD)
+# Simulación de usuarios (trae de una BD)
 class User(UserMixin):
     def __init__(self, id, username):
         self.id = id
         self.username = username
 
-# Diccionario simulando la base de datos
+# diccionario simulando la base de datos
 users = {"elias": User(1, "elias")}
 
 @login_manager.user_loader

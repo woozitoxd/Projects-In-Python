@@ -17,3 +17,4 @@ def get_session():
 def clear_session():
     session.clear()
     return "Sesión borrada"
+

@@ -9,7 +9,6 @@ hashed_pw = bcrypt.generate_password_hash(password).decode('utf-8')
 print("Contraseña en texto plano:", password)
 print("Contraseña encriptada (hash):", hashed_pw)
 
-
 # Contraseña guardada (hash) en la base de datos
 stored_pw = hashed_pw
 
