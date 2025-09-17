@@ -1,19 +1,17 @@
-#Paso importamos el modulo
+
+#Primer paso: importar la libreria
 import tkinter as tkin
 from tkinter import messagebox
 
-
 def saludar():
     print("Hola desde Tkinter")
-
-
-
-
+    
 def main():
     ventana = tkin.Tk()
     ventana.title("Mi Ventana Tkinter")
     ventana.geometry("300x200")
     
+    #Ahora usaremos algunos widgets
     etiqueta = tkin.Label(ventana, text="Hola, Tkinter")
     etiqueta.pack()  # Agrega el widget a la ventana
     
@@ -26,16 +24,14 @@ def main():
     
     
     boton = tkin.Button(ventana, text="Clic acá", command=mostrar_mensaje)
-    boton.pack()
+    boton.pack() # Agregamos el boton a la ventana
     
     entrada = tkin.Entry(ventana)
     entrada.pack() # Agregamos la entrada de texto a la ventana
     
-    ventana.mainloop()
-    
-  
-    
+    ventana.mainloop()# Inicia el loop de la ventana
+
+
 if __name__ == "__main__":
     main()
-
 
