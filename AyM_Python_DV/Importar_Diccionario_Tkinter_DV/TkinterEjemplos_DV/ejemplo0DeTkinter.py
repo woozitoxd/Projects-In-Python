@@ -3,8 +3,10 @@
 import tkinter as tkin
 from tkinter import messagebox
 
-def saludar():
-    print("Hola desde Tkinter")
+def saludar(etiqueta):
+    etiqueta.config(text="Hola desde Tkinter en la pantalla\n")
+    print("Hola desde Tkinter en consola")
+
     
 def main():
     ventana = tkin.Tk()
@@ -15,7 +17,8 @@ def main():
     etiqueta = tkin.Label(ventana, text="Hola, Tkinter")
     etiqueta.pack()  # Agrega el widget a la ventana
     
-    boton = tkin.Button(ventana, text="Saludar", command=saludar)
+    boton = tkin.Button(ventana, text="Saludar", command=lambda: saludar(etiqueta))
+    #Se utiliza lambda para pasar parametros a la funcion y que no se ejecute al crear el boton
     boton.pack() # Agregamos el boton a la ventana
     
     def mostrar_mensaje():
