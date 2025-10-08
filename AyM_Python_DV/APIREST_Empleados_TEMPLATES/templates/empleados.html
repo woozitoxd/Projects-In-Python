@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de empleados</title>
+</head>
+<body>
+    <h2>Empleados registrados</h2>
+    <table border="1">
+        <tr><th>ID</th><th>Nombre</th><th>Puesto</th><th>Salario</th></tr>
+        {% for emp in empleados %}
+        <tr>
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.nombre }}</td>
+            <td>{{ emp.puesto }}</td>
+            <td>{{ emp.salario }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Volver</a>
+</body>
+</html>

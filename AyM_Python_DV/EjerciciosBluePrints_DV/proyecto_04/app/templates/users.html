@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+    <ul>
+        {% for u in usuarios %}
+            <li><a href="{{ url_for('users.user_profile', username=u) }}">{{ u }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

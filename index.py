@@ -1,5 +1,3 @@
-
-
 import requests
 from pymongo import MongoClient
 import pprint
