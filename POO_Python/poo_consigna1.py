@@ -6,12 +6,12 @@ class Persona:
 
     def saludar(self):
         print(f"Hola, me llamo {self.nombre} y tengo {self.edad} años.")
-        
-        
-        
+
+
 persona1 = Persona("Ghami", 24)
 persona1.saludar()
 #Salida: Hola, me llamo Ghami y tengo 24 años
+
 
 
 print(persona1.nombre) # Salida: Ghami
@@ -39,7 +39,7 @@ class Persona:
 person = Persona("Elias", 30)
 print(person.get_nombre())  #Salida: Elias
 person.set_nombre("Ghami")
-print(person.get_nombre())  # Salida: Ghami
+print(person.get_nombre())  #Salida: Ghami
 
 
 #Herencia
